@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "724202841407",
+    "project_id": "ducpv-pokedex",
+    "storage_bucket": "ducpv-pokedex.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:724202841407:android:3de747c2e8a512c6dc1f8a",
+        "android_client_info": {
+          "package_name": "com.ducpv.flutter_pokedex"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "724202841407-njch6p89acmdcbp8dloaj2tlu1kuc1md.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuD9rQAW8CRKrwh4A1H4-AEOUj10rPKSw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "724202841407-njch6p89acmdcbp8dloaj2tlu1kuc1md.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_pokedex/shared/models/pokemon_summary.dart';
+import 'package:flutter_pokedex/shared/ui/widgets/firebase_image.dart';
 import 'package:flutter_pokedex/shared/utils/image_utils.dart';
 
 class PokemonInfoPagerWidget extends StatefulWidget {
@@ -39,7 +40,7 @@ class _PokemonInfoPagerWidgetState extends State<PokemonInfoPagerWidget> {
               currentPokemon.number != widget.pokemon.number ? 32 : 0,
             ),
             child: ImageUtils.networkImage(
-              url: currentPokemon.imageUrl,
+              imageURL: currentPokemon.imageUrl,
               color: currentPokemon.number != widget.pokemon.number ? Colors.black.withOpacity(0.2) : null,
             ),
           );

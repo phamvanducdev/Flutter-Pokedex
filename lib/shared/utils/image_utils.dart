@@ -3,13 +3,15 @@ import 'package:flutter/material.dart';
 
 class ImageUtils {
   static Widget networkImage({
-    required String url,
+    required String imageURL,
+    String? cacheKey,
     double? height,
     double? width,
     Color? color,
   }) {
     return CachedNetworkImage(
-      imageUrl: url,
+      imageUrl: imageURL,
+      cacheKey: cacheKey,
       height: height,
       width: width,
       color: color,

@@ -1,5 +1,5 @@
 name: flutter_pokedex
-description: Project clone from https://github.dev/alanlgoncalves/pokedex.
+description: PokedexApp
 publish_to: 'none'
 
 version: 1.0.0+1
@@ -23,6 +23,7 @@ dependencies:
   audioplayers: ^4.1.0
   audio_video_progress_bar: ^1.0.1
   firebase_core: ^2.15.0
+  firebase_auth: ^4.7.2
   firebase_storage: ^11.2.5
   firebase_crashlytics: ^3.3.4
 
@@ -51,7 +52,6 @@ flutter:
     - assets/images/pokemons_generations/generation_7/
     - assets/images/pokemons_generations/generation_8/
     - assets/lotties/
-    - assets/cards/
     
 
   fonts:

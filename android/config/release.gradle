@@ -1,0 +1,8 @@
+signingConfigs {
+    release {
+        storeFile file("release.keystore")
+        storePassword "pokedex"
+        keyAlias "pokedex"
+        keyPassword "pokedex"
+    }
+}

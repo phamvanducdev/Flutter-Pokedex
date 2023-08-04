@@ -16,11 +16,12 @@ class PokeItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var appColors = AppTheme.getColors(context);
     var textTheme = AppTheme.of(context).textTheme;
 
     return Container(
       decoration: BoxDecoration(
-        color: AppTheme.getColors(context).pokemonItem(pokemon.types[0]),
+        color: appColors.pokemonItem(pokemon.types[0]),
         borderRadius: BorderRadius.circular(12),
       ),
       child: ClipRRect(
@@ -31,10 +32,7 @@ class PokeItemWidget extends StatelessWidget {
               bottom: -16,
               right: -8,
               child: CustomPaint(
-                size: const Size(
-                  82,
-                  82,
-                ),
+                size: const Size(82, 82),
                 painter: PokeballLogoPainter(
                   color: Colors.white.withOpacity(0.25),
                 ),
@@ -50,7 +48,7 @@ class PokeItemWidget extends StatelessWidget {
                   child: Hero(
                     tag: isFavorite ? "favorite-pokemon-image-${pokemon.number}" : "pokemon-image-${pokemon.number}",
                     child: ImageUtils.networkImage(
-                      url: pokemon.thumbnailUrl,
+                      imageURL: pokemon.thumbnailUrl,
                     ),
                   ),
                 ),
@@ -59,20 +57,17 @@ class PokeItemWidget extends StatelessWidget {
             Align(
               alignment: Alignment.topRight,
               child: Padding(
-                padding: const EdgeInsets.only(right: 8, top: 8),
+                padding: const EdgeInsets.only(right: 8, top: 12),
                 child: Text(
                   "#${pokemon.number}",
-                  style: TextStyle(
-                    fontFamily: "CircularStd-Book",
-                    fontSize: 14,
-                    fontWeight: FontWeight.bold,
-                    color: AppTheme.getColors(context).pokemonDetailsTitleColor.withOpacity(0.6),
+                  style: textTheme.titleMedium?.copyWith(
+                    color: appColors.pokemonDetailsTitleColor.withOpacity(0.6),
                   ),
                 ),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 16, top: 8),
+              padding: const EdgeInsets.only(left: 16, top: 12),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -80,35 +75,38 @@ class PokeItemWidget extends StatelessWidget {
                   Text(
                     pokemon.name,
                     style: textTheme.bodyLarge?.copyWith(
-                        fontWeight: FontWeight.bold, color: AppTheme.getColors(context).pokemonDetailsTitleColor),
+                      fontWeight: FontWeight.bold,
+                      color: appColors.pokemonDetailsTitleColor,
+                    ),
                   ),
-                  const SizedBox(
-                    height: 8,
-                  ),
+                  const SizedBox(height: 8),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: pokemon.types
-                        .map((type) => Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 2),
-                              child: Container(
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(38),
-                                    color: AppTheme.getColors(context).pokemonDetailsTitleColor.withOpacity(0.4)),
-                                child: Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                    horizontal: 12,
-                                    vertical: 4,
-                                  ),
-                                  child: Text(
-                                    type,
-                                    style: textTheme.bodyMedium?.copyWith(
-                                      fontSize: 8,
-                                      color: AppTheme.getColors(context).pokemonDetailsTitleColor,
-                                    ),
+                        .map(
+                          (type) => Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 2),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                color: appColors.pokemonDetailsTitleColor.withOpacity(0.4),
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 12,
+                                  vertical: 4,
+                                ),
+                                child: Text(
+                                  type,
+                                  style: textTheme.bodyMedium?.copyWith(
+                                    fontSize: 8,
+                                    color: appColors.pokemonDetailsTitleColor,
                                   ),
                                 ),
                               ),
-                            ))
+                            ),
+                          ),
+                        )
                         .toList(),
                   ),
                 ],

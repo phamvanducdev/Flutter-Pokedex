@@ -8,7 +8,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 class PokemonRepository {
   Future<List<PokemonSummary>> fetchPokemonsSummary() async {
     try {
-      var response = await http.get(Uri.parse(ApiConstants.pokedexSummaryData));
+      var response = await http.get(Uri.parse(ApiConstants.pokedexSummary));
       return List<PokemonSummary>.from(
         jsonDecode(response.body).map((model) => PokemonSummary.fromJson(model)),
       );
