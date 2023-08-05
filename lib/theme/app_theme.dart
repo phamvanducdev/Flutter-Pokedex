@@ -15,10 +15,11 @@ abstract class AppColors {
   Color get pokeballLogoGray;
   Color get pokemonDetailsTitleColor;
   Color get appBarButtons;
+  Color get black => Color(0xFF000000);
+  Color get white => Color(0xFFFFFFFF);
 
   Color get floatActionButton => Color(0xFF6C79DB);
 
-  Color get selectPokemonTabTitle;
   Color get pokemonTabTitle;
   Color get tabDivisor => Color(0xFFE4E4E4);
   Color get tabIndicator => Color(0xFF6C79DB);
