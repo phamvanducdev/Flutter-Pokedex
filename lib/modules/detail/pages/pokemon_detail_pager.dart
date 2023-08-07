@@ -22,10 +22,6 @@ class PokemonDetailPagerWidget extends StatefulWidget {
 class _PokemonDetailPagerWidgetState extends State<PokemonDetailPagerWidget> with TickerProviderStateMixin {
   TabController? _tabController;
   PanelController? _panelController;
-  ScrollController? _aboutPageScrollController;
-  ScrollController? _baseStatsPageScrollController;
-  ScrollController? _evolutionPageScrollController;
-  ScrollController? _movesPageScrollController;
 
   @override
   void initState() {
@@ -35,20 +31,25 @@ class _PokemonDetailPagerWidgetState extends State<PokemonDetailPagerWidget> wit
       vsync: this,
     );
     _panelController = PanelController();
-    _aboutPageScrollController = ScrollController();
-    _baseStatsPageScrollController = ScrollController();
-    _evolutionPageScrollController = ScrollController();
-    _movesPageScrollController = ScrollController();
   }
 
   @override
   void dispose() {
     _tabController?.dispose();
-    _aboutPageScrollController?.dispose();
-    _baseStatsPageScrollController?.dispose();
-    _evolutionPageScrollController?.dispose();
-    _movesPageScrollController?.dispose();
     super.dispose();
+  }
+
+  void onUserScrollNotificationListener(UserScrollNotification userScrollNotification) {
+    if (userScrollNotification.metrics.pixels > 0) {
+      if (_panelController?.isPanelOpen == false) {
+        _panelController?.open();
+      }
+    }
+    if (userScrollNotification.metrics.pixels == 0) {
+      if (_panelController?.isPanelOpen == true) {
+        _panelController?.close();
+      }
+    }
   }
 
   @override
@@ -156,41 +157,17 @@ class _PokemonDetailPagerWidgetState extends State<PokemonDetailPagerWidget> wit
                   body: TabBarView(
                     controller: _tabController,
                     children: [
-                      NotificationListener<UserScrollNotification>(
-                        child: SingleChildScrollView(
-                          controller: _aboutPageScrollController,
-                          child: AboutPage(viewModel: widget.viewModel),
-                        ),
-                        onNotification: (UserScrollNotification scrollInfo) {
-                          return true;
-                        },
+                      SingleChildScrollView(
+                        child: AboutPage(viewModel: widget.viewModel),
                       ),
-                      NotificationListener<UserScrollNotification>(
-                        child: SingleChildScrollView(
-                          controller: _baseStatsPageScrollController,
-                          child: AboutPage(viewModel: widget.viewModel),
-                        ),
-                        onNotification: (UserScrollNotification scrollInfo) {
-                          return false;
-                        },
+                      SingleChildScrollView(
+                        child: AboutPage(viewModel: widget.viewModel),
                       ),
-                      NotificationListener<UserScrollNotification>(
-                        child: SingleChildScrollView(
-                          controller: _evolutionPageScrollController,
-                          child: AboutPage(viewModel: widget.viewModel),
-                        ),
-                        onNotification: (UserScrollNotification scrollInfo) {
-                          return true;
-                        },
+                      SingleChildScrollView(
+                        child: AboutPage(viewModel: widget.viewModel),
                       ),
-                      NotificationListener<UserScrollNotification>(
-                        child: SingleChildScrollView(
-                          controller: _movesPageScrollController,
-                          child: AboutPage(viewModel: widget.viewModel),
-                        ),
-                        onNotification: (UserScrollNotification scrollInfo) {
-                          return true;
-                        },
+                      SingleChildScrollView(
+                        child: AboutPage(viewModel: widget.viewModel),
                       ),
                     ],
                   ),
