@@ -1,11 +1,11 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_pokedex/modules/detail/pages/about/widget/animated_sprites.dart';
-import 'package:flutter_pokedex/modules/detail/pages/about/widget/breeding_info.dart';
-import 'package:flutter_pokedex/modules/detail/pages/about/widget/height_weight_info.dart';
-import 'package:flutter_pokedex/modules/detail/pages/about/widget/pokemon_cards.dart';
-import 'package:flutter_pokedex/modules/detail/pages/about/widget/sound_player.dart';
-import 'package:flutter_pokedex/modules/detail/pages/about/widget/training_info.dart';
+import 'package:flutter_pokedex/modules/detail/pages/about/widgets/animated_sprites.dart';
+import 'package:flutter_pokedex/modules/detail/pages/about/widgets/breeding_info.dart';
+import 'package:flutter_pokedex/modules/detail/pages/about/widgets/height_weight_info.dart';
+import 'package:flutter_pokedex/modules/detail/pages/about/widgets/pokemon_cards.dart';
+import 'package:flutter_pokedex/modules/detail/pages/about/widgets/sound_player.dart';
+import 'package:flutter_pokedex/modules/detail/pages/about/widgets/training_info.dart';
 import 'package:flutter_pokedex/modules/detail/pokemon_detail_vm.dart';
 import 'package:flutter_pokedex/shared/models/pokemon.dart';
 import 'package:flutter_pokedex/theme/app_theme.dart';
@@ -104,7 +104,7 @@ class _AboutPageState extends State<AboutPage> {
               BreedingInfoWidget(pokemon: pokemon),
               TrainingInfoWidget(pokemon: pokemon),
               PokemonCardsWidget(pokemon: pokemon),
-              Container(height: 156),
+              Container(height: 240),
             ],
           );
         } else {

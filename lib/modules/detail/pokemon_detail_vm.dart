@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'package:flutter_pokedex/modules/detail/pages/about/widget/sound_player.dart';
+import 'package:flutter_pokedex/modules/detail/pages/about/widgets/sound_player.dart';
 import 'package:get_it/get_it.dart';
 import 'package:flutter_pokedex/shared/models/pokemon.dart';
 import 'package:flutter_pokedex/shared/models/pokemon_summary.dart';

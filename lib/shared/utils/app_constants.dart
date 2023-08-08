@@ -34,7 +34,7 @@ class AppConstants {
   ];
 
   static String pokemonTypeLogo(String type, int? size) {
-    final sizePath = size != null ? "/$size" : "";
+    var sizePath = size != null ? "/$size" : "";
 
     switch (type.toLowerCase()) {
       case "dark":

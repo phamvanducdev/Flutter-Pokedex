@@ -27,7 +27,7 @@ abstract class AppColors {
   Color get marsIcon => Color(0xFF919BE4);
   Color get venusIcon => Color(0xFFF38EB3);
 
-  Color get unknownIcon => Color(0xFF303943);
+  Color get unknownIcon => Color(0xFF303030);
 
   Color get generationFilter;
   Color get selectedGenerationFilter;
