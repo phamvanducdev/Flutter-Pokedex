@@ -57,6 +57,7 @@ class BaseStatsItemWidget extends StatelessWidget {
                 FractionallySizedBox(
                   widthFactor: barPercentage,
                   child: AnimatedContainer(
+                    key: Key(title),
                     duration: const Duration(seconds: 3),
                     height: 10,
                     decoration: BoxDecoration(
@@ -67,7 +68,7 @@ class BaseStatsItemWidget extends StatelessWidget {
                 ),
               ],
             ),
-          )
+          ),
         ],
       ),
     );

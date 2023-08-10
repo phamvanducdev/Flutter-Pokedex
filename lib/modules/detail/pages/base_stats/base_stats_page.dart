@@ -15,7 +15,6 @@ class BaseStatsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-    var appColors = AppTheme.getColors(context);
     var textTheme = AppTheme.of(context).textTheme;
 
     return StreamBuilder<Pokemon?>(
