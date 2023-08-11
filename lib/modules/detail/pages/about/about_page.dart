@@ -104,7 +104,7 @@ class _AboutPageState extends State<AboutPage> {
               BreedingInfoWidget(pokemon: pokemon),
               TrainingInfoWidget(pokemon: pokemon),
               PokemonCardsWidget(pokemon: pokemon),
-              Container(height: 240),
+              Container(height: 120),
             ],
           );
         } else {

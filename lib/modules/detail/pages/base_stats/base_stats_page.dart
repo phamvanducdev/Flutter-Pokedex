@@ -84,7 +84,7 @@ class BaseStatsPage extends StatelessWidget {
                         title: 'Immune to', types: pokemon.typesEffectiveness.entries.where((it) => it.value == '0')),
                   ],
                 ),
-                Container(height: 240),
+                Container(height: 120),
               ],
             ),
           ),

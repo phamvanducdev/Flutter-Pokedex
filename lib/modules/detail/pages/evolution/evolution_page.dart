@@ -6,7 +6,6 @@ import 'package:flutter_pokedex/modules/detail/pages/evolution/widgets/supper_ev
 import 'package:flutter_pokedex/modules/detail/pokemon_detail_vm.dart';
 import 'package:flutter_pokedex/shared/models/pokemon.dart';
 import 'package:flutter_pokedex/shared/utils/evolution_chain_utils.dart';
-import 'package:flutter_pokedex/theme/app_theme.dart';
 
 class EvolutionPage extends StatelessWidget {
   final PokemonDetailViewModel viewModel;
@@ -54,7 +53,7 @@ class EvolutionPage extends StatelessWidget {
                   pokemonType: pokemon.types[0],
                   pokemonImageURL: pokemon.imageUrl,
                 ),
-              const SizedBox(height: 320),
+              const SizedBox(height: 120),
             ],
           ),
         );
