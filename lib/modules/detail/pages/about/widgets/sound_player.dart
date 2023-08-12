@@ -33,7 +33,10 @@ class SoundPlayerWidget extends StatelessWidget {
     var appColors = AppTheme.getColors(context);
 
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 12),
+      padding: const EdgeInsets.symmetric(
+        vertical: 12,
+        horizontal: 24,
+      ),
       child: Container(
         decoration: BoxDecoration(
           color: appColors.panelBackground,

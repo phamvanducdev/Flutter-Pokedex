@@ -26,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
             child: CustomScrollView(
               slivers: [
                 AppBarWidget(
-                  title: 'Pokedex',
+                  title: 'Poké',
                   animationPath: AppConstants.squirtleLottie,
                 ),
                 PokemonsView(viewModel: viewModel),

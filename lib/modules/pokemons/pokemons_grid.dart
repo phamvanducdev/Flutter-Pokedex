@@ -17,8 +17,7 @@ class PokemonsGridWidget extends StatefulWidget {
 class _PokemonsGridWidgetState extends State<PokemonsGridWidget> {
   static const _pageSize = 20;
 
-  final PagingController<int, Widget> _pagingController =
-      PagingController(firstPageKey: 0);
+  final PagingController<int, Widget> _pagingController = PagingController(firstPageKey: 0);
 
   @override
   void initState() {
@@ -36,12 +35,9 @@ class _PokemonsGridWidgetState extends State<PokemonsGridWidget> {
   }
 
   void _fetchPage(int pageKey) async {
-    debugPrint('fetchPage => $pageKey');
     final maxRange = widget.pokemons.length;
     final initialRange = pageKey * _pageSize;
-    final finalRange = (pageKey * _pageSize) + _pageSize > maxRange
-        ? maxRange
-        : (pageKey * _pageSize) + _pageSize;
+    final finalRange = (pageKey * _pageSize) + _pageSize > maxRange ? maxRange : (pageKey * _pageSize) + _pageSize;
 
     List<Widget> items = [];
 

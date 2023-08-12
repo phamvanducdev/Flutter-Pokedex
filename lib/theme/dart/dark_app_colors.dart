@@ -13,9 +13,6 @@ class DarkAppColors extends AppColors {
   Color get pokemonTabTitle => Color(0xFF303943).withOpacity(0.4);
 
   @override
-  Color get selectPokemonTabTitle => Color(0xFF303943);
-
-  @override
   Color get selectedGenerationFilter => Color(0xFFFFFFFF).withOpacity(0.5);
 
   @override

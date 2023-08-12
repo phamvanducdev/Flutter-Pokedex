@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_pokedex/modules/detail/pages/about/about_page.dart';
+import 'package:flutter_pokedex/modules/detail/pages/base_stats/base_stats_page.dart';
+import 'package:flutter_pokedex/modules/detail/pages/evolution/evolution_page.dart';
+import 'package:flutter_pokedex/modules/detail/pages/moves/moves_page.dart';
 import 'package:flutter_pokedex/modules/detail/pokemon_detail_vm.dart';
+import 'package:flutter_pokedex/shared/models/pokemon_summary.dart';
 import 'package:flutter_pokedex/theme/app_theme.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 
@@ -36,6 +40,19 @@ class _PokemonDetailPagerWidgetState extends State<PokemonDetailPagerWidget> wit
   void dispose() {
     _tabController?.dispose();
     super.dispose();
+  }
+
+  void onUserScrollNotificationListener(UserScrollNotification userScrollNotification) {
+    if (userScrollNotification.metrics.pixels > 0) {
+      if (_panelController?.isPanelOpen == false) {
+        _panelController?.open();
+      }
+    }
+    if (userScrollNotification.metrics.pixels == 0) {
+      if (_panelController?.isPanelOpen == true) {
+        _panelController?.close();
+      }
+    }
   }
 
   @override
@@ -92,59 +109,70 @@ class _PokemonDetailPagerWidgetState extends State<PokemonDetailPagerWidget> wit
                                 ),
                                 color: appColors.backgroundColor,
                               ),
-                              child: TabBar(
-                                padding: const EdgeInsets.only(top: 8),
-                                overlayColor: MaterialStateProperty.all(Colors.transparent),
-                                labelColor: appColors.selectPokemonTabTitle,
-                                labelStyle: textTheme.labelLarge,
-                                unselectedLabelColor: appColors.pokemonTabTitle,
-                                unselectedLabelStyle: textTheme.labelLarge,
-                                indicatorColor: appColors.tabIndicator,
-                                controller: _tabController,
-                                tabs: const [
-                                  Tab(
-                                    child: FittedBox(
-                                      fit: BoxFit.fitWidth,
-                                      child: Text('About'),
-                                    ),
-                                  ),
-                                  Tab(
-                                    child: FittedBox(
-                                      fit: BoxFit.fitWidth,
-                                      child: Text('Base Stats'),
-                                    ),
-                                  ),
-                                  Tab(
-                                    child: FittedBox(
-                                      fit: BoxFit.fitWidth,
-                                      child: Text('Evolution'),
-                                    ),
-                                  ),
-                                  Tab(
-                                    child: FittedBox(
-                                      fit: BoxFit.fitWidth,
-                                      child: Text('Moves'),
-                                    ),
-                                  ),
-                                ],
-                              ),
+                              child: StreamBuilder<PokemonSummary>(
+                                  stream: widget.viewModel.streamPokemonSummary,
+                                  builder: (context, snapshot) {
+                                    var pokemon = snapshot.data;
+                                    var pokemonColor = appColors.pokemonItem(pokemon?.types[0]);
+                                    return TabBar(
+                                      padding: const EdgeInsets.only(top: 8),
+                                      overlayColor: MaterialStateProperty.all(Colors.transparent),
+                                      labelColor: pokemonColor,
+                                      labelStyle: textTheme.labelLarge,
+                                      unselectedLabelColor: appColors.pokemonTabTitle,
+                                      unselectedLabelStyle: textTheme.labelLarge,
+                                      indicatorColor: pokemonColor,
+                                      controller: _tabController,
+                                      tabs: const [
+                                        Tab(
+                                          child: FittedBox(
+                                            fit: BoxFit.fitWidth,
+                                            child: Text('About'),
+                                          ),
+                                        ),
+                                        Tab(
+                                          child: FittedBox(
+                                            fit: BoxFit.fitWidth,
+                                            child: Text('BaseStats'),
+                                          ),
+                                        ),
+                                        Tab(
+                                          child: FittedBox(
+                                            fit: BoxFit.fitWidth,
+                                            child: Text('Evolution'),
+                                          ),
+                                        ),
+                                        Tab(
+                                          child: FittedBox(
+                                            fit: BoxFit.fitWidth,
+                                            child: Text('Moves'),
+                                          ),
+                                        ),
+                                      ],
+                                    );
+                                  }),
                             ),
                           ],
                         ),
                       ),
                     ];
                   },
-                  body: Padding(
-                    padding: const EdgeInsets.only(top: 8),
-                    child: TabBarView(
-                      controller: _tabController,
-                      children: [
-                        AboutPage(viewModel: widget.viewModel),
-                        const Text('Base Stats'),
-                        const Text('Evolution'),
-                        const Text('Moves'),
-                      ],
-                    ),
+                  body: TabBarView(
+                    controller: _tabController,
+                    children: [
+                      SingleChildScrollView(
+                        child: AboutPage(viewModel: widget.viewModel),
+                      ),
+                      SingleChildScrollView(
+                        child: BaseStatsPage(viewModel: widget.viewModel),
+                      ),
+                      SingleChildScrollView(
+                        child: EvolutionPage(viewModel: widget.viewModel),
+                      ),
+                      SingleChildScrollView(
+                        child: MovesPage(viewModel: widget.viewModel),
+                      ),
+                    ],
                   ),
                 ),
               ),

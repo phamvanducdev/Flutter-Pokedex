@@ -10,7 +10,11 @@ class PokemonRepository {
     try {
       var response = await http.get(Uri.parse(ApiConstants.pokedexSummary));
       return List<PokemonSummary>.from(
-        jsonDecode(response.body).map((model) => PokemonSummary.fromJson(model)),
+        jsonDecode(
+          const Utf8Decoder().convert(response.body.codeUnits),
+        ).map(
+          (model) => PokemonSummary.fromJson(model),
+        ),
       );
     } catch (e) {
       rethrow;
@@ -20,7 +24,9 @@ class PokemonRepository {
   Future<Pokemon> fetchPokemonDetail(String number) async {
     var response = await http.get(Uri.parse(ApiConstants.pokemonDetails(number)));
     return Pokemon.fromJson(
-      jsonDecode(response.body),
+      jsonDecode(
+        const Utf8Decoder().convert(response.body.codeUnits),
+      ),
     );
   }
 
