@@ -1,7 +1,14 @@
 import 'dart:async';
+import 'package:get_it/get_it.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_pokedex/modules/detail/pages/moves/widgets/tables/egg_moves_table.dart';
+import 'package:flutter_pokedex/modules/detail/pages/moves/widgets/tables/evolution_moves_table.dart';
+import 'package:flutter_pokedex/modules/detail/pages/moves/widgets/tables/level_up_moves_table.dart';
+import 'package:flutter_pokedex/modules/detail/pages/moves/widgets/tables/technical_machines_moves_table.dart';
+import 'package:flutter_pokedex/modules/detail/pages/moves/widgets/tables/technical_records_moves_table.dart';
+import 'package:flutter_pokedex/modules/detail/pages/moves/widgets/tables/tutor_moves_table.dart';
 import 'package:flutter_pokedex/modules/detail/pages/about/widgets/sound_player.dart';
 import 'package:flutter_pokedex/shared/extension/list_extension.dart';
-import 'package:get_it/get_it.dart';
 import 'package:flutter_pokedex/shared/models/pokemon.dart';
 import 'package:flutter_pokedex/shared/models/pokemon_summary.dart';
 import 'package:flutter_pokedex/shared/repositories/pokemon_repository.dart';
@@ -27,8 +34,8 @@ class MoveState {
     this.isExpanded,
   );
 
-  String title() {
-    switch (type) {
+  static String getHeaderTitle(MoveState moveState) {
+    switch (moveState.type) {
       case MoveType.levelUp:
         return 'Moves learnt by level up';
       case MoveType.technicalMachine:
@@ -41,6 +48,23 @@ class MoveState {
         return 'Egg moves';
       case MoveType.tutor:
         return 'Tutor moves';
+    }
+  }
+
+  static Widget getBodyWidget(MoveState moveState) {
+    switch (moveState.type) {
+      case MoveType.levelUp:
+        return LevelUpMovesTableWidget(moves: moveState.moves);
+      case MoveType.technicalMachine:
+        return TechnicalMachinesMovesTableWidget(moves: moveState.moves);
+      case MoveType.technicalRecords:
+        return TechnicalRecordsMovesTableWidget(moves: moveState.moves);
+      case MoveType.evolution:
+        return EvolutionMovesTableWidget(moves: moveState.moves);
+      case MoveType.egg:
+        return EggMovesTableWidget(moves: moveState.moves);
+      case MoveType.tutor:
+        return TutorMovesTableWidget(moves: moveState.moves);
     }
   }
 }

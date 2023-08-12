@@ -3,7 +3,7 @@
    <application
         android:name=".PokedexApp"
         android:icon="@mipmap/ic_launcher"
-        android:label="Pokédex">
+        android:label="Poké">
         <activity
             android:name=".MainActivity"
             android:exported="true"

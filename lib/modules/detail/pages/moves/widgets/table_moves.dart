@@ -20,9 +20,7 @@ class TableMovesWidget extends StatelessWidget {
         columnSpacing: 12,
         dataRowHeight: 42,
         headingRowHeight: 42,
-        dataTextStyle: textTheme.bodyLarge?.copyWith(
-          overflow: TextOverflow.ellipsis,
-        ),
+        dataTextStyle: textTheme.bodyLarge,
         columns: columns.map((column) => DataColumn(label: column)).toList(),
         rows: rows
             .map(

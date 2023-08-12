@@ -46,6 +46,8 @@ class MovesPage extends StatelessWidget {
                   stream: viewModel.streamMoves,
                   builder: (context, snapshot) {
                     var moves = snapshot.data.orEmpty;
+                    if (moves.isEmpty) return Container();
+
                     return ExpansionPanelList(
                       elevation: 0,
                       dividerColor: appColors.backgroundColor,
@@ -54,52 +56,9 @@ class MovesPage extends StatelessWidget {
                       },
                       expandedHeaderPadding: EdgeInsets.zero,
                       children: moves.map(
-                        (move) {
-                          String titleHeader;
-                          switch (move.type) {
-                            case MoveType.levelUp:
-                              titleHeader = 'Moves learnt by level up';
-                              break;
-                            case MoveType.technicalMachine:
-                              titleHeader = 'Moves learnt by Technical Machines';
-                              break;
-                            case MoveType.technicalRecords:
-                              titleHeader = 'Moves learnt by Technical Records';
-                              break;
-                            case MoveType.evolution:
-                              titleHeader = 'Moves learnt on evolution';
-                              break;
-                            case MoveType.egg:
-                              titleHeader = 'Egg moves';
-                              break;
-                            case MoveType.tutor:
-                              titleHeader = 'Tutor moves';
-                              break;
-                          }
-
-                          StatelessWidget widgetBody;
-                          switch (move.type) {
-                            case MoveType.levelUp:
-                              widgetBody = LevelUpMovesTableWidget(moves: move.moves);
-                              break;
-                            case MoveType.technicalMachine:
-                              widgetBody = TechnicalMachinesMovesTableWidget(moves: move.moves);
-                              break;
-                            case MoveType.technicalRecords:
-                              widgetBody = TechnicalRecordsMovesTableWidget(moves: move.moves);
-                              break;
-                            case MoveType.evolution:
-                              widgetBody = EvolutionMovesTableWidget(moves: move.moves);
-                              break;
-                            case MoveType.egg:
-                              widgetBody = EggMovesTableWidget(moves: move.moves);
-                              break;
-                            case MoveType.tutor:
-                              widgetBody = TutorMovesTableWidget(moves: move.moves);
-                              break;
-                          }
+                        (moveState) {
                           return ExpansionPanel(
-                            isExpanded: move.isExpanded,
+                            isExpanded: moveState.isExpanded,
                             canTapOnHeader: true,
                             headerBuilder: (context, isExpanded) {
                               return SizedBox(
@@ -109,7 +68,7 @@ class MovesPage extends StatelessWidget {
                                     horizontal: 24,
                                   ),
                                   child: Text(
-                                    titleHeader,
+                                    MoveState.getHeaderTitle(moveState),
                                     textAlign: TextAlign.start,
                                     style: textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold),
                                   ),
@@ -118,7 +77,7 @@ class MovesPage extends StatelessWidget {
                             },
                             body: SingleChildScrollView(
                               scrollDirection: Axis.horizontal,
-                              child: widgetBody,
+                              child: MoveState.getBodyWidget(moveState),
                             ),
                           );
                         },
