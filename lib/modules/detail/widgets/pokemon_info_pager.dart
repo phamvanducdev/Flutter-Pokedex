@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pokedex/shared/models/pokemon_summary.dart';
-import 'package:flutter_pokedex/shared/utils/image_utils.dart';
+import 'package:pokedex/shared/models/pokemon_summary.dart';
+import 'package:pokedex/shared/utils/image_utils.dart';
 
 class PokemonInfoPagerWidget extends StatefulWidget {
   final PokemonSummary pokemon;

@@ -1,6 +1,6 @@
-import 'package:flutter_pokedex/shared/caches/firestore_images.dart';
 import 'package:get_it/get_it.dart';
-import 'package:flutter_pokedex/shared/getit/getit.dart';
+import 'package:pokedex/shared/caches/firestore_images.dart';
+import 'package:pokedex/shared/getit/getit.dart';
 
 class CacheRegister extends IGetItRegister {
   @override

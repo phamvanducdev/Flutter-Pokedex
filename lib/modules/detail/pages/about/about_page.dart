@@ -1,14 +1,14 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_pokedex/modules/detail/pages/about/widgets/animated_sprites.dart';
-import 'package:flutter_pokedex/modules/detail/pages/about/widgets/breeding_info.dart';
-import 'package:flutter_pokedex/modules/detail/pages/about/widgets/height_weight_info.dart';
-import 'package:flutter_pokedex/modules/detail/pages/about/widgets/pokemon_cards.dart';
-import 'package:flutter_pokedex/modules/detail/pages/about/widgets/sound_player.dart';
-import 'package:flutter_pokedex/modules/detail/pages/about/widgets/training_info.dart';
-import 'package:flutter_pokedex/modules/detail/pokemon_detail_vm.dart';
-import 'package:flutter_pokedex/shared/models/pokemon.dart';
-import 'package:flutter_pokedex/theme/app_theme.dart';
+import 'package:pokedex/modules/detail/pages/about/widgets/animated_sprites.dart';
+import 'package:pokedex/modules/detail/pages/about/widgets/breeding_info.dart';
+import 'package:pokedex/modules/detail/pages/about/widgets/height_weight_info.dart';
+import 'package:pokedex/modules/detail/pages/about/widgets/pokemon_cards.dart';
+import 'package:pokedex/modules/detail/pages/about/widgets/sound_player.dart';
+import 'package:pokedex/modules/detail/pages/about/widgets/training_info.dart';
+import 'package:pokedex/modules/detail/pokemon_detail_vm.dart';
+import 'package:pokedex/shared/models/pokemon.dart';
+import 'package:pokedex/theme/app_theme.dart';
 
 class AboutPage extends StatefulWidget {
   final PokemonDetailViewModel viewModel;

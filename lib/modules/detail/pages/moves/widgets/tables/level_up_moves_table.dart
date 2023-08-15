@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pokedex/modules/detail/pages/moves/widgets/table_moves.dart';
-import 'package:flutter_pokedex/shared/models/pokemon.dart';
-import 'package:flutter_pokedex/shared/ui/widgets/pokemon_type_badge.dart';
-import 'package:flutter_pokedex/theme/app_theme.dart';
+import 'package:pokedex/modules/detail/pages/moves/widgets/table_moves.dart';
+import 'package:pokedex/shared/models/pokemon.dart';
+import 'package:pokedex/shared/ui/widgets/pokemon_type_badge.dart';
+import 'package:pokedex/theme/app_theme.dart';
 
 class LevelUpMovesTableWidget extends StatelessWidget {
   final List<Move> moves;

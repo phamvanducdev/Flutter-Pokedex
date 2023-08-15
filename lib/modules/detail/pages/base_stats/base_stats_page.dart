@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pokedex/modules/detail/pages/base_stats/widgets/base_stats_item.dart';
-import 'package:flutter_pokedex/modules/detail/pages/base_stats/widgets/table_row_factory.dart';
-import 'package:flutter_pokedex/modules/detail/pokemon_detail_vm.dart';
-import 'package:flutter_pokedex/shared/models/pokemon.dart';
-import 'package:flutter_pokedex/theme/app_theme.dart';
+import 'package:pokedex/modules/detail/pages/base_stats/widgets/base_stats_item.dart';
+import 'package:pokedex/modules/detail/pages/base_stats/widgets/table_row_factory.dart';
+import 'package:pokedex/modules/detail/pokemon_detail_vm.dart';
+import 'package:pokedex/shared/models/pokemon.dart';
+import 'package:pokedex/theme/app_theme.dart';
 
 class BaseStatsPage extends StatelessWidget {
   final PokemonDetailViewModel viewModel;

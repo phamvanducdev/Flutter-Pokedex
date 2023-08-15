@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pokedex/theme/app_theme.dart';
+import 'package:pokedex/theme/app_theme.dart';
 
 class AppBarNavigationWidget extends StatelessWidget {
   final double opacity;

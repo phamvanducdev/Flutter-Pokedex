@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pokedex/modules/detail/pages/about/about_page.dart';
-import 'package:flutter_pokedex/modules/detail/pages/base_stats/base_stats_page.dart';
-import 'package:flutter_pokedex/modules/detail/pages/evolution/evolution_page.dart';
-import 'package:flutter_pokedex/modules/detail/pages/moves/moves_page.dart';
-import 'package:flutter_pokedex/modules/detail/pokemon_detail_vm.dart';
-import 'package:flutter_pokedex/shared/models/pokemon_summary.dart';
-import 'package:flutter_pokedex/theme/app_theme.dart';
+import 'package:pokedex/modules/detail/pages/about/about_page.dart';
+import 'package:pokedex/modules/detail/pages/base_stats/base_stats_page.dart';
+import 'package:pokedex/modules/detail/pages/evolution/evolution_page.dart';
+import 'package:pokedex/modules/detail/pages/moves/moves_page.dart';
+import 'package:pokedex/modules/detail/pokemon_detail_vm.dart';
+import 'package:pokedex/shared/models/pokemon_summary.dart';
+import 'package:pokedex/theme/app_theme.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 
 class PokemonDetailPagerWidget extends StatefulWidget {

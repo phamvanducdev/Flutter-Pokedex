@@ -1,15 +1,16 @@
 {
   "project_info": {
     "project_number": "724202841407",
+    "firebase_url": "https://ducpv-pokedex-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "ducpv-pokedex",
     "storage_bucket": "ducpv-pokedex.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:724202841407:android:3de747c2e8a512c6dc1f8a",
+        "mobilesdk_app_id": "1:724202841407:android:439362d9c4973659dc1f8a",
         "android_client_info": {
-          "package_name": "com.ducpv.flutter_pokedex"
+          "package_name": "com.ducpv.pokedex"
         }
       },
       "oauth_client": [
@@ -29,6 +30,13 @@
             {
               "client_id": "724202841407-njch6p89acmdcbp8dloaj2tlu1kuc1md.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "724202841407-1njjmbn1nmvuouenqbcamgch3k21ol8r.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ducpv.flutterPokedex"
+              }
             }
           ]
         }

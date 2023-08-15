@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
-import 'package:flutter_pokedex/modules/detail/pokemon_detail_vm.dart';
-import 'package:flutter_pokedex/modules/detail/widgets/app_bar.dart';
-import 'package:flutter_pokedex/modules/detail/widgets/pokemon_info.dart';
-import 'package:flutter_pokedex/modules/detail/pages/pokemon_detail_pager.dart';
-import 'package:flutter_pokedex/shared/models/pokemon_summary.dart';
+import 'package:pokedex/modules/detail/pokemon_detail_vm.dart';
+import 'package:pokedex/modules/detail/widgets/app_bar.dart';
+import 'package:pokedex/modules/detail/widgets/pokemon_info.dart';
+import 'package:pokedex/modules/detail/pages/pokemon_detail_pager.dart';
+import 'package:pokedex/shared/models/pokemon_summary.dart';
 
 class PokemonDetailScreen extends StatefulWidget {
   final int index;

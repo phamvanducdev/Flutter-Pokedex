@@ -1,6 +1,6 @@
 import 'package:get_it/get_it.dart';
-import 'package:flutter_pokedex/shared/getit/getit.dart';
-import 'package:flutter_pokedex/shared/repositories/pokemon_repository.dart';
+import 'package:pokedex/shared/getit/getit.dart';
+import 'package:pokedex/shared/repositories/pokemon_repository.dart';
 
 class RepositoryRegister extends IGetItRegister {
   @override

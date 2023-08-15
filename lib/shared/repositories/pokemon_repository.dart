@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:flutter_pokedex/shared/models/pokemon.dart';
-import 'package:flutter_pokedex/shared/models/pokemon_summary.dart';
-import 'package:flutter_pokedex/shared/utils/api_constants.dart';
+import 'package:pokedex/shared/models/pokemon.dart';
+import 'package:pokedex/shared/models/pokemon_summary.dart';
+import 'package:pokedex/shared/utils/api_constants.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class PokemonRepository {

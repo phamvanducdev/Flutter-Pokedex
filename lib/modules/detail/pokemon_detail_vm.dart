@@ -1,17 +1,17 @@
 import 'dart:async';
 import 'package:get_it/get_it.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_pokedex/modules/detail/pages/moves/widgets/tables/egg_moves_table.dart';
-import 'package:flutter_pokedex/modules/detail/pages/moves/widgets/tables/evolution_moves_table.dart';
-import 'package:flutter_pokedex/modules/detail/pages/moves/widgets/tables/level_up_moves_table.dart';
-import 'package:flutter_pokedex/modules/detail/pages/moves/widgets/tables/technical_machines_moves_table.dart';
-import 'package:flutter_pokedex/modules/detail/pages/moves/widgets/tables/technical_records_moves_table.dart';
-import 'package:flutter_pokedex/modules/detail/pages/moves/widgets/tables/tutor_moves_table.dart';
-import 'package:flutter_pokedex/modules/detail/pages/about/widgets/sound_player.dart';
-import 'package:flutter_pokedex/shared/extension/list_extension.dart';
-import 'package:flutter_pokedex/shared/models/pokemon.dart';
-import 'package:flutter_pokedex/shared/models/pokemon_summary.dart';
-import 'package:flutter_pokedex/shared/repositories/pokemon_repository.dart';
+import 'package:pokedex/modules/detail/pages/moves/widgets/tables/egg_moves_table.dart';
+import 'package:pokedex/modules/detail/pages/moves/widgets/tables/evolution_moves_table.dart';
+import 'package:pokedex/modules/detail/pages/moves/widgets/tables/level_up_moves_table.dart';
+import 'package:pokedex/modules/detail/pages/moves/widgets/tables/technical_machines_moves_table.dart';
+import 'package:pokedex/modules/detail/pages/moves/widgets/tables/technical_records_moves_table.dart';
+import 'package:pokedex/modules/detail/pages/moves/widgets/tables/tutor_moves_table.dart';
+import 'package:pokedex/modules/detail/pages/about/widgets/sound_player.dart';
+import 'package:pokedex/shared/extension/list_extension.dart';
+import 'package:pokedex/shared/models/pokemon.dart';
+import 'package:pokedex/shared/models/pokemon_summary.dart';
+import 'package:pokedex/shared/repositories/pokemon_repository.dart';
 import 'package:rxdart/rxdart.dart';
 
 enum MoveType {

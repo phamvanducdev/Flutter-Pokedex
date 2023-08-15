@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pokedex/shared/utils/image_utils.dart';
-import 'package:flutter_pokedex/theme/app_theme.dart';
+import 'package:pokedex/shared/utils/image_utils.dart';
+import 'package:pokedex/theme/app_theme.dart';
 
 class EmptyEvolutionChainWidget extends StatelessWidget {
   final String pokemonName;

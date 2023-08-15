@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pokedex/shared/extension/string_extension.dart';
-import 'package:flutter_pokedex/shared/ui/widgets/pokemon_type_badge.dart';
-import 'package:flutter_pokedex/theme/app_theme.dart';
+import 'package:pokedex/shared/extension/string_extension.dart';
+import 'package:pokedex/shared/ui/widgets/pokemon_type_badge.dart';
+import 'package:pokedex/theme/app_theme.dart';
 
 class TypeEffectivenessWidget extends StatelessWidget {
   final String? type;

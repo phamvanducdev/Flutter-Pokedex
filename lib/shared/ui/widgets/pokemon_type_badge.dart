@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pokedex/shared/utils/app_constants.dart';
-import 'package:flutter_pokedex/theme/app_theme.dart';
+import 'package:pokedex/shared/utils/app_constants.dart';
+import 'package:pokedex/theme/app_theme.dart';
 
 class PokemonTypeBadge extends StatelessWidget {
   final String type;

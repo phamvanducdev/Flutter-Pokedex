@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pokedex/shared/ui/canvas/background_dots.dart';
+import 'package:pokedex/shared/ui/canvas/background_dots.dart';
 
 class AppBarBackgroundWidget extends StatelessWidget {
   final Color backgroundColor;

@@ -1,10 +1,10 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:flutter_pokedex/theme/dart/dark_app_colors.dart';
-import 'package:flutter_pokedex/theme/dart/dark_theme.dart';
-import 'package:flutter_pokedex/theme/light/light_app_colors.dart';
-import 'package:flutter_pokedex/theme/light/light_theme.dart';
+import 'package:pokedex/theme/dart/dark_app_colors.dart';
+import 'package:pokedex/theme/dart/dark_theme.dart';
+import 'package:pokedex/theme/light/light_app_colors.dart';
+import 'package:pokedex/theme/light/light_theme.dart';
 
 abstract class AppColors {
   const AppColors(BuildContext context);
