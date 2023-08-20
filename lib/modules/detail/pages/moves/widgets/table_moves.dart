@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pokedex/theme/app_theme.dart';
+import 'package:pokedex/theme/app_theme.dart';
 
 class TableMovesWidget extends StatelessWidget {
   final List<Widget> columns;

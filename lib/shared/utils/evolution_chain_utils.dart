@@ -1,6 +1,6 @@
-import 'package:flutter_pokedex/modules/detail/pages/evolution/widgets/evolution_chain_item.dart';
-import 'package:flutter_pokedex/modules/detail/pages/evolution/widgets/supper_evolution_chain_item.dart';
-import 'package:flutter_pokedex/shared/models/pokemon.dart';
+import 'package:pokedex/modules/detail/pages/evolution/widgets/evolution_chain_item.dart';
+import 'package:pokedex/modules/detail/pages/evolution/widgets/supper_evolution_chain_item.dart';
+import 'package:pokedex/shared/models/pokemon.dart';
 
 class EvolutionChainUtils {
   static List<EvolutionChainItemWidget> getEvolutionChain(Pokemon pokemon) {

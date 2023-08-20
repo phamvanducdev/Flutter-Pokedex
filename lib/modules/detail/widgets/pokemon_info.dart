@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pokedex/modules/detail/pokemon_detail_vm.dart';
-import 'package:flutter_pokedex/modules/detail/widgets/pokemon_info_pager.dart';
-import 'package:flutter_pokedex/modules/detail/widgets/pokemon_info_summary.dart';
-import 'package:flutter_pokedex/shared/models/pokemon_summary.dart';
-import 'package:flutter_pokedex/shared/ui/widgets/animated_pokeball.dart';
-import 'package:flutter_pokedex/theme/app_theme.dart';
+import 'package:pokedex/modules/detail/pokemon_detail_vm.dart';
+import 'package:pokedex/modules/detail/widgets/pokemon_info_pager.dart';
+import 'package:pokedex/modules/detail/widgets/pokemon_info_summary.dart';
+import 'package:pokedex/shared/models/pokemon_summary.dart';
+import 'package:pokedex/shared/ui/widgets/animated_pokeball.dart';
+import 'package:pokedex/theme/app_theme.dart';
 
 class PokemonInfoWidget extends StatefulWidget {
   final PokemonDetailViewModel viewModel;

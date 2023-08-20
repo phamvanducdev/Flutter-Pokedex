@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:724202841407:android:3de747c2e8a512c6dc1f8a",
         "android_client_info": {
-          "package_name": "com.ducpv.flutter_pokedex"
+          "package_name": "com.ducpv.pokedex"
         }
       },
       "oauth_client": [

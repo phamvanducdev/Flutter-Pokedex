@@ -1,9 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ducpv.flutter_pokedex">
+    package="com.ducpv.pokedex">
    <application
         android:name=".PokedexApp"
-        android:icon="@mipmap/ic_launcher"
-        android:label="Poké">
+        android:icon="@drawable/ic_launcher"
+        android:label="Podex">
         <activity
             android:name=".MainActivity"
             android:exported="true"

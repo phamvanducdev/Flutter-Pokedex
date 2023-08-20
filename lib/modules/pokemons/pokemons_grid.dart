@@ -1,9 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
-import 'package:flutter_pokedex/modules/detail/pokemon_detail_screen.dart';
-import 'package:flutter_pokedex/modules/pokemons/pokemon_item.dart';
-import 'package:flutter_pokedex/shared/models/pokemon_summary.dart';
+import 'package:pokedex/modules/detail/pokemon_detail_screen.dart';
+import 'package:pokedex/modules/pokemons/pokemon_item.dart';
+import 'package:pokedex/shared/models/pokemon_summary.dart';
 
 class PokemonsGridWidget extends StatefulWidget {
   final List<PokemonSummary> pokemons;

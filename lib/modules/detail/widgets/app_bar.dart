@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pokedex/modules/detail/pokemon_detail_vm.dart';
-import 'package:flutter_pokedex/modules/detail/widgets/app_bar_background.dart';
-import 'package:flutter_pokedex/modules/detail/widgets/app_bar_navigation.dart';
-import 'package:flutter_pokedex/shared/models/pokemon_summary.dart';
-import 'package:flutter_pokedex/theme/app_theme.dart';
+import 'package:pokedex/modules/detail/pokemon_detail_vm.dart';
+import 'package:pokedex/modules/detail/widgets/app_bar_background.dart';
+import 'package:pokedex/modules/detail/widgets/app_bar_navigation.dart';
+import 'package:pokedex/shared/models/pokemon_summary.dart';
+import 'package:pokedex/theme/app_theme.dart';
 
 class AppBarWidget extends StatelessWidget {
   final PokemonDetailViewModel viewModel;

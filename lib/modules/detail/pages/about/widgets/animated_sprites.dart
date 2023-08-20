@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pokedex/shared/extension/string_extension.dart';
-import 'package:flutter_pokedex/shared/models/pokemon.dart';
-import 'package:flutter_pokedex/shared/utils/image_utils.dart';
-import 'package:flutter_pokedex/theme/app_theme.dart';
+import 'package:pokedex/shared/extension/string_extension.dart';
+import 'package:pokedex/shared/models/pokemon.dart';
+import 'package:pokedex/shared/utils/image_utils.dart';
+import 'package:pokedex/theme/app_theme.dart';
 
 class AnimatedSpritesWidget extends StatelessWidget {
   final bool isShiny;

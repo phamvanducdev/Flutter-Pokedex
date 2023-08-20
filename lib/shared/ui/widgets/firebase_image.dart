@@ -1,10 +1,10 @@
 import 'dart:async';
+import 'package:get_it/get_it.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_storage/firebase_storage.dart';
-import 'package:flutter_pokedex/shared/caches/firestore_images.dart';
-import 'package:flutter_pokedex/shared/extension/string_extension.dart';
-import 'package:flutter_pokedex/shared/utils/image_utils.dart';
-import 'package:get_it/get_it.dart';
+import 'package:pokedex/shared/caches/firestore_images.dart';
+import 'package:pokedex/shared/extension/string_extension.dart';
+import 'package:pokedex/shared/utils/image_utils.dart';
 
 class FireStorageImageWidget extends StatelessWidget {
   final String storagePath;

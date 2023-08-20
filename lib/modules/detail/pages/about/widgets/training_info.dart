@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pokedex/shared/models/pokemon.dart';
-import 'package:flutter_pokedex/theme/app_theme.dart';
+import 'package:pokedex/shared/models/pokemon.dart';
+import 'package:pokedex/theme/app_theme.dart';
 
 class TrainingInfoWidget extends StatelessWidget {
   final Pokemon pokemon;

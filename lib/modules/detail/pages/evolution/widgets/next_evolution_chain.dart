@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pokedex/modules/detail/pages/evolution/widgets/evolution_chain_item.dart';
-import 'package:flutter_pokedex/shared/models/pokemon.dart';
-import 'package:flutter_pokedex/theme/app_theme.dart';
+import 'package:pokedex/modules/detail/pages/evolution/widgets/evolution_chain_item.dart';
+import 'package:pokedex/shared/models/pokemon.dart';
+import 'package:pokedex/theme/app_theme.dart';
 
 class NextEvolutionChainWidget extends StatelessWidget {
   final Pokemon pokemon;

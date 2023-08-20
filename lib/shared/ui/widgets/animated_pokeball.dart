@@ -1,6 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:flutter_pokedex/shared/ui/canvas/white_pokeball_canvas.dart';
+import 'package:pokedex/shared/ui/canvas/white_pokeball_canvas.dart';
 
 class AnimatedPokeballWidget extends StatefulWidget {
   final Color color;

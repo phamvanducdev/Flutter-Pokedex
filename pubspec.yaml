@@ -1,8 +1,8 @@
-name: flutter_pokedex
+name: pokedex
 description: PokedexApp
 publish_to: 'none'
 
-version: 1.0.2+3
+version: 1.0.0+1
 
 environment:
   sdk: '>=2.19.1 <3.0.0'
@@ -13,6 +13,7 @@ dependencies:
   http: ^0.13.3
   get_it: ^7.1.3
   rxdart: ^0.27.7
+  go_router: ^10.1.0
   lottie: ^2.2.0
   flutter_svg: ^1.0.3
   path_provider: ^2.0.5
@@ -40,6 +41,9 @@ flutter:
     - assets/images/
     - assets/images/icons/
     - assets/images/pokemons_types/
+    - assets/images/pokemons_types/16/
+    - assets/images/pokemons_types/20/
+    - assets/images/pokemons_types/60/
     - assets/images/technical_records_types/
     - assets/images/technical_machines_types/
     - assets/images/pokemons_generations/generation_1/
@@ -65,5 +69,5 @@ flutter_icons:
   image_path: "assets/images/icons/app_icon.png"
 
 flutter_native_splash:
-  image: "assets/images/splash_logo.png"
+  image: "assets/images/icons/app_icon.png"
   color: "#ffffff"

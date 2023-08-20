@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:flutter_pokedex/theme/app_theme.dart';
+import 'package:pokedex/theme/app_theme.dart';
 
 class DarkAppColors extends AppColors {
   DarkAppColors(super.context);

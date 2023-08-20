@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:flutter_pokedex/shared/ui/widgets/animated_pokeball.dart';
-import 'package:flutter_pokedex/theme/app_theme.dart';
+import 'package:pokedex/shared/ui/widgets/animated_pokeball.dart';
+import 'package:pokedex/theme/app_theme.dart';
 
 class AppBarWidget extends StatefulWidget {
   final String title;

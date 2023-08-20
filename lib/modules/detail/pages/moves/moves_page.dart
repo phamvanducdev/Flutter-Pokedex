@@ -1,14 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pokedex/modules/detail/pages/moves/widgets/tables/egg_moves_table.dart';
-import 'package:flutter_pokedex/modules/detail/pages/moves/widgets/tables/evolution_moves_table.dart';
-import 'package:flutter_pokedex/modules/detail/pages/moves/widgets/tables/level_up_moves_table.dart';
-import 'package:flutter_pokedex/modules/detail/pages/moves/widgets/tables/technical_machines_moves_table.dart';
-import 'package:flutter_pokedex/modules/detail/pages/moves/widgets/tables/technical_records_moves_table.dart';
-import 'package:flutter_pokedex/modules/detail/pages/moves/widgets/tables/tutor_moves_table.dart';
-import 'package:flutter_pokedex/modules/detail/pokemon_detail_vm.dart';
-import 'package:flutter_pokedex/shared/extension/list_extension.dart';
-import 'package:flutter_pokedex/shared/models/pokemon.dart';
-import 'package:flutter_pokedex/theme/app_theme.dart';
+import 'package:pokedex/modules/detail/pokemon_detail_vm.dart';
+import 'package:pokedex/shared/extension/list_extension.dart';
+import 'package:pokedex/shared/models/pokemon.dart';
+import 'package:pokedex/theme/app_theme.dart';
 
 class MovesPage extends StatelessWidget {
   final PokemonDetailViewModel viewModel;

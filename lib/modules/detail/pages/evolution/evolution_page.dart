@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pokedex/modules/detail/pages/evolution/widgets/empty_evolution_chain.dart';
-import 'package:flutter_pokedex/modules/detail/pages/evolution/widgets/next_evolution_chain.dart';
-import 'package:flutter_pokedex/modules/detail/pages/evolution/widgets/previous_evolution_chain.dart';
-import 'package:flutter_pokedex/modules/detail/pages/evolution/widgets/supper_evolution_chain.dart';
-import 'package:flutter_pokedex/modules/detail/pokemon_detail_vm.dart';
-import 'package:flutter_pokedex/shared/models/pokemon.dart';
-import 'package:flutter_pokedex/shared/utils/evolution_chain_utils.dart';
+import 'package:pokedex/modules/detail/pages/evolution/widgets/empty_evolution_chain.dart';
+import 'package:pokedex/modules/detail/pages/evolution/widgets/next_evolution_chain.dart';
+import 'package:pokedex/modules/detail/pages/evolution/widgets/previous_evolution_chain.dart';
+import 'package:pokedex/modules/detail/pages/evolution/widgets/supper_evolution_chain.dart';
+import 'package:pokedex/modules/detail/pokemon_detail_vm.dart';
+import 'package:pokedex/shared/models/pokemon.dart';
+import 'package:pokedex/shared/utils/evolution_chain_utils.dart';
 
 class EvolutionPage extends StatelessWidget {
   final PokemonDetailViewModel viewModel;

@@ -1,4 +1,4 @@
-import 'package:flutter_pokedex/shared/models/pokemon.dart';
+import 'package:pokedex/shared/models/pokemon.dart';
 
 class PokemonSummary {
   late String number;

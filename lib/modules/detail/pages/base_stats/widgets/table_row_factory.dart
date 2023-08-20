@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pokedex/modules/detail/pages/base_stats/widgets/type_effectiveness_badge.dart';
-import 'package:flutter_pokedex/theme/app_theme.dart';
+import 'package:pokedex/modules/detail/pages/base_stats/widgets/type_effectiveness_badge.dart';
+import 'package:pokedex/theme/app_theme.dart';
 
 class TableRowFactory {
   static TableRow build(
