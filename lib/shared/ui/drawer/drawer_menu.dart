@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:lottie/lottie.dart';
 import 'package:pokedex/shared/ui/drawer/drawer_menu_item.dart';
 import 'package:pokedex/shared/ui/widgets/animated_pokeball.dart';
@@ -48,7 +49,8 @@ class DrawerMenuWidget extends StatelessWidget {
                   child: GridView(
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
-                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
                       mainAxisExtent: 64,
                     ),
@@ -56,12 +58,16 @@ class DrawerMenuWidget extends StatelessWidget {
                       DrawerMenuItemWidget(
                         itemText: 'Pokédex',
                         itemColor: appColors.drawerPokedex,
-                        onTapListener: () {},
+                        onTapListener: () {
+                          GoRouter.of(context).replace('/home');
+                        },
                       ),
                       DrawerMenuItemWidget(
                         itemText: 'Items',
                         itemColor: appColors.drawerItems,
-                        onTapListener: () {},
+                        onTapListener: () {
+                          GoRouter.of(context).replace('/items');
+                        },
                       ),
                       DrawerMenuItemWidget(
                         itemText: 'Moves',

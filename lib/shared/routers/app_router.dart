@@ -1,15 +1,16 @@
 // ignore_for_file: constant_identifier_names
 
-import 'package:flutter_pokedex/modules/detail/pokemon_detail_screen.dart';
-import 'package:flutter_pokedex/modules/home/home_screen.dart';
-import 'package:flutter_pokedex/modules/items/items_screen.dart';
 import 'package:go_router/go_router.dart';
+import 'package:pokedex/modules/detail/pokemon_detail_screen.dart';
+import 'package:pokedex/modules/home/home_screen.dart';
+import 'package:pokedex/modules/items/items_screen.dart';
 
 class AppRouter {
   static GoRouter routers = GoRouter(
+    initialLocation: '/home',
     routes: [
       GoRoute(
-        path: '/',
+        path: '/home',
         builder: (context, state) {
           return const HomeScreen();
         },
@@ -29,10 +30,4 @@ class AppRouter {
       ),
     ],
   );
-}
-
-class AppRouterNames {
-  static const String HOME = 'home';
-  static const String ITEMS = 'items';
-  static const String DETAILS = 'details';
 }

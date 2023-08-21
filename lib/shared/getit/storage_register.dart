@@ -1,6 +1,6 @@
-import 'package:flutter_pokedex/shared/storages/pokedexs.dart';
 import 'package:get_it/get_it.dart';
-import 'package:flutter_pokedex/shared/getit/getit.dart';
+import 'package:pokedex/shared/getit/getit.dart';
+import 'package:pokedex/shared/storages/pokedexs.dart';
 
 class StorageRegister extends IGetItRegister {
   @override
