@@ -4,16 +4,13 @@ import 'package:pokedex/modules/detail/pokemon_detail_vm.dart';
 import 'package:pokedex/modules/detail/widgets/app_bar.dart';
 import 'package:pokedex/modules/detail/widgets/pokemon_info.dart';
 import 'package:pokedex/modules/detail/pages/pokemon_detail_pager.dart';
-import 'package:pokedex/shared/models/pokemon_summary.dart';
 
 class PokemonDetailScreen extends StatefulWidget {
   final int index;
-  final List<PokemonSummary> pokemons;
 
   const PokemonDetailScreen({
     super.key,
     required this.index,
-    required this.pokemons,
   });
 
   @override
@@ -32,7 +29,7 @@ class _PokemonDetailScreenState extends State<PokemonDetailScreen> {
       initialPage: widget.index,
       viewportFraction: 0.42,
     );
-    viewModel.initial(widget.index, widget.pokemons);
+    viewModel.initial(widget.index);
   }
 
   @override

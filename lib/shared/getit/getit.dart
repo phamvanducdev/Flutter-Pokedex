@@ -1,5 +1,6 @@
 import 'package:pokedex/shared/getit/cache_register.dart';
 import 'package:pokedex/shared/getit/repository_register.dart';
+import 'package:pokedex/shared/getit/storage_register.dart';
 import 'package:pokedex/shared/getit/viewmodel_register.dart';
 
 abstract class IGetItRegister {
@@ -9,6 +10,7 @@ abstract class IGetItRegister {
 class GetItRegister {
   static register() {
     CacheRegister().register();
+    StorageRegister().register();
     RepositoryRegister().register();
     ViewModelRegister().register();
   }
