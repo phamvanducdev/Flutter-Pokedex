@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_pokedex/shared/ui/widgets/drawer_menu.dart';
 import 'package:get_it/get_it.dart';
 import 'package:pokedex/shared/ui/drawer/drawer_menu.dart';
 import 'package:pokedex/modules/home/home_vm.dart';
@@ -15,7 +16,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final HomeViewModel viewModel = GetIt.instance<HomeViewModel>();
+  HomeViewModel viewModel = GetIt.instance<HomeViewModel>();
 
   @override
   Widget build(BuildContext context) {
