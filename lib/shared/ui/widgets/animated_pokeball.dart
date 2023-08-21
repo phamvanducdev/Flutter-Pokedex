@@ -16,7 +16,8 @@ class AnimatedPokeballWidget extends StatefulWidget {
   State<AnimatedPokeballWidget> createState() => _AnimatedPokeballWidgetState();
 }
 
-class _AnimatedPokeballWidgetState extends State<AnimatedPokeballWidget> with SingleTickerProviderStateMixin {
+class _AnimatedPokeballWidgetState extends State<AnimatedPokeballWidget>
+    with SingleTickerProviderStateMixin {
   late AnimationController _controller;
 
   @override

@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'package:flutter_pokedex/shared/storages/pokedexs.dart';
 import 'package:get_it/get_it.dart';
 import 'package:flutter/material.dart';
 import 'package:pokedex/modules/detail/pages/moves/widgets/tables/egg_moves_table.dart';
@@ -13,6 +12,7 @@ import 'package:pokedex/shared/extension/list_extension.dart';
 import 'package:pokedex/shared/models/pokemon.dart';
 import 'package:pokedex/shared/models/pokemon_summary.dart';
 import 'package:pokedex/shared/repositories/pokemon_repository.dart';
+import 'package:pokedex/shared/storages/pokedexs.dart';
 import 'package:rxdart/rxdart.dart';
 
 enum MoveType {

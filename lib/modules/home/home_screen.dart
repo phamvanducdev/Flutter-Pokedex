@@ -1,6 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_pokedex/shared/ui/widgets/drawer_menu.dart';
 import 'package:get_it/get_it.dart';
+import 'package:flutter/material.dart';
 import 'package:pokedex/shared/ui/drawer/drawer_menu.dart';
 import 'package:pokedex/modules/home/home_vm.dart';
 import 'package:pokedex/modules/pokemons/pokemons_view.dart';
