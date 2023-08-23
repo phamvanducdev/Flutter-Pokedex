@@ -4,8 +4,8 @@ import 'package:pokedex/shared/models/pokemon.dart';
 import 'package:pokedex/shared/models/pokemon_summary.dart';
 
 class PokedexStorage {
-  final _pokemonsMap = <String, PokemonSummary>{};
-  final _pokemonDetailMap = <String, Pokemon>{};
+  final Map<String, PokemonSummary> _pokemonsMap = {};
+  final Map<String, Pokemon> _pokemonsDetailMap = {};
 
   List<PokemonSummary> getPokemons() => _pokemonsMap.values.toList();
 
@@ -15,9 +15,9 @@ class PokedexStorage {
     }
   }
 
-  Pokemon? getPokemonDetail(String number) => _pokemonDetailMap[number];
+  Pokemon? getPokemonDetail(String number) => _pokemonsDetailMap[number];
 
   void insertPokemonDetail(Pokemon pokemon) {
-    _pokemonDetailMap[pokemon.number] = pokemon;
+    _pokemonsDetailMap[pokemon.number] = pokemon;
   }
 }

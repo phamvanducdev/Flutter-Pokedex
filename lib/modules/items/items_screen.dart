@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:pokedex/modules/items/items_vm.dart';
+import 'package:pokedex/modules/items/widgets/item_list.dart';
 import 'package:pokedex/shared/ui/drawer/drawer_menu.dart';
+import 'package:pokedex/shared/ui/widgets/animated_pokeball.dart';
 import 'package:pokedex/shared/ui/widgets/app_bar.dart';
 import 'package:pokedex/shared/utils/app_constants.dart';
 import 'package:pokedex/theme/app_theme.dart';
@@ -27,7 +29,7 @@ class _ItemsScreenState extends State<ItemsScreen> {
             child: CustomScrollView(
               slivers: [
                 AppBarWidget(
-                  title: 'Podex',
+                  title: 'Items',
                   animationPath: AppConstants.squirtleLottie,
                 ),
                 ItemsWidget(viewModel: viewModel),
@@ -55,6 +57,35 @@ class ItemsWidget extends StatefulWidget {
 class _ItemsWidgetState extends State<ItemsWidget> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return FutureBuilder<void>(
+      future: widget.viewModel.fetchItems(),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          // Loading...
+          return SliverFillRemaining(
+            child: Center(
+              child: AnimatedPokeballWidget(
+                size: 120,
+                color: AppTheme.getColors(context).pokeballLogoGray,
+              ),
+            ),
+          );
+        } else if (snapshot.hasError) {
+          // Failed
+          return const SliverFillRemaining(
+            child: Center(
+              child: Text('Failed fetching data!'),
+            ),
+          );
+        } else {
+          // Success
+          final items = widget.viewModel.items;
+          return SliverPadding(
+            padding: const EdgeInsets.all(16),
+            sliver: ItemListWidget(items: items),
+          );
+        }
+      },
+    );
   }
 }
