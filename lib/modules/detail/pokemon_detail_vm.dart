@@ -12,7 +12,7 @@ import 'package:pokedex/shared/extension/list_extension.dart';
 import 'package:pokedex/shared/models/pokemon.dart';
 import 'package:pokedex/shared/models/pokemon_summary.dart';
 import 'package:pokedex/shared/repositories/pokemon_repository.dart';
-import 'package:pokedex/shared/storages/pokedexs.dart';
+import 'package:pokedex/shared/storages/pokedex.dart';
 import 'package:rxdart/rxdart.dart';
 
 enum MoveType {

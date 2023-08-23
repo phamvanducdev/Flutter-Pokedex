@@ -5,17 +5,19 @@ import 'package:pokedex/modules/items/items_vm.dart';
 import 'package:pokedex/shared/getit/getit.dart';
 
 class ViewModelRegister extends IGetItRegister {
-  @override
-  void register() {
-    GetIt getIt = GetIt.instance;
+  final GetIt instance = GetIt.instance;
 
-    getIt.registerFactory<HomeViewModel>(
+  @override
+  Future<void> register() async {
+    instance.registerFactory<HomeViewModel>(
       () => HomeViewModel(),
     );
-    getIt.registerFactory<ItemsViewModel>(
+
+    instance.registerFactory<ItemsViewModel>(
       () => ItemsViewModel(),
     );
-    getIt.registerFactory<PokemonDetailViewModel>(
+
+    instance.registerFactory<PokemonDetailViewModel>(
       () => PokemonDetailViewModel(),
     );
   }

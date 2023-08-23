@@ -1,4 +1,4 @@
-class FirestoreImageCaches {
+class FirestoreImageCacheStorage {
   final Map<String, String> imageURLCaches = {};
 
   Future<String?> getImageURL(String storagePath) async {
