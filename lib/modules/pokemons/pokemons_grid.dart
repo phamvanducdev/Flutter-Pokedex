@@ -8,7 +8,10 @@ import 'package:pokedex/shared/models/pokemon_summary.dart';
 class PokemonsGridWidget extends StatefulWidget {
   final List<PokemonSummary> pokemons;
 
-  const PokemonsGridWidget({super.key, required this.pokemons});
+  const PokemonsGridWidget({
+    super.key,
+    required this.pokemons,
+  });
 
   @override
   State<PokemonsGridWidget> createState() => _PokemonsGridWidgetState();
@@ -43,9 +46,7 @@ class _PokemonsGridWidgetState extends State<PokemonsGridWidget> {
 
     for (int index = initialRange; index < finalRange; index++) {
       final pokemon = widget.pokemons[index];
-
       items.add(_buildPokemonItem(index: index, pokemon: pokemon));
-
       _preCachePokemonImage(pokemon: pokemon);
     }
 
