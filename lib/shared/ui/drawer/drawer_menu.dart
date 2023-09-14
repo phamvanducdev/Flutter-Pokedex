@@ -49,13 +49,13 @@ class DrawerMenuWidget extends StatelessWidget {
                   child: GridView(
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
-                    gridDelegate:
-                        const SliverGridDelegateWithFixedCrossAxisCount(
+                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
                       mainAxisExtent: 64,
                     ),
                     children: [
                       DrawerMenuItemWidget(
+                        available: true,
                         itemText: 'Pokédex',
                         itemColor: appColors.drawerPokedex,
                         onTapListener: () {
@@ -63,6 +63,7 @@ class DrawerMenuWidget extends StatelessWidget {
                         },
                       ),
                       DrawerMenuItemWidget(
+                        available: true,
                         itemText: 'Items',
                         itemColor: appColors.drawerItems,
                         onTapListener: () {

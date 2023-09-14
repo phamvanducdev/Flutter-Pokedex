@@ -48,7 +48,7 @@ class PokemonRepositoryImpl extends PokemonRepository {
         jsonDecode(
           const Utf8Decoder().convert(response.body.codeUnits),
         ).map(
-          (model) => Item(name: 'name', category: 'category', effect: 'effect'),
+          (model) => Item.fromJson(model),
         ),
       );
       itemsStorage.setItems(items);
@@ -63,8 +63,7 @@ class PokemonRepositoryImpl extends PokemonRepository {
     if (pokedexStorage.getPokemonDetail(number) != null) {
       return pokedexStorage.getPokemonDetail(number)!;
     }
-    var response =
-        await http.get(Uri.parse(ApiConstants.pokemonDetails(number)));
+    var response = await http.get(Uri.parse(ApiConstants.pokemonDetails(number)));
     var pokemon = Pokemon.fromJson(
       jsonDecode(
         const Utf8Decoder().convert(response.body.codeUnits),
