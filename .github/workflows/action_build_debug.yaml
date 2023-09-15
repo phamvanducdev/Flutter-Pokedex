@@ -1,6 +1,6 @@
 name: Action Build Debug & Upload APK to FirebaseAppDistribution
 on:
-  push:
+  pull_request:
     branches: [ develop ]
 
 jobs:

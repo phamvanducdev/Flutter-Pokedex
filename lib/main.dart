@@ -1,7 +1,7 @@
 import 'firebase_options.dart';
+import 'package:pokedex/shared/routers/app_router.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:pokedex/modules/home/home_screen.dart';
 import 'package:pokedex/shared/getit/getit.dart';
 import 'package:pokedex/theme/app_theme.dart';
 
@@ -19,10 +19,10 @@ class PokedexApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
+    return MaterialApp.router(
       theme: AppTheme.of(context),
-      home: const HomeScreen(),
+      debugShowCheckedModeBanner: false,
+      routerConfig: AppRouter.routers,
     );
   }
 }

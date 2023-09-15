@@ -12,6 +12,7 @@ import 'package:pokedex/shared/extension/list_extension.dart';
 import 'package:pokedex/shared/models/pokemon.dart';
 import 'package:pokedex/shared/models/pokemon_summary.dart';
 import 'package:pokedex/shared/repositories/pokemon_repository.dart';
+import 'package:pokedex/shared/storages/pokedex.dart';
 import 'package:rxdart/rxdart.dart';
 
 enum MoveType {
@@ -70,6 +71,7 @@ class MoveState {
 }
 
 class PokemonDetailViewModel {
+  PokedexStorage pokedexStorage = GetIt.instance<PokedexStorage>();
   PokemonRepository pokemonRepository = GetIt.instance<PokemonRepository>();
 
   int _pokemonIndex = 0;
@@ -83,8 +85,10 @@ class PokemonDetailViewModel {
   bool get previousPokemonEnable => _pokemonIndex > 0;
   bool get nextPokemonEnable => _pokemonIndex < _pokemonsSummary.length - 1;
 
-  final BehaviorSubject<PokemonSummary> _streamPokemonSummary = BehaviorSubject();
-  Stream<PokemonSummary> get streamPokemonSummary => _streamPokemonSummary.stream;
+  final BehaviorSubject<PokemonSummary> _streamPokemonSummary =
+      BehaviorSubject();
+  Stream<PokemonSummary> get streamPokemonSummary =>
+      _streamPokemonSummary.stream;
 
   final BehaviorSubject<Pokemon?> _streamPokemon = BehaviorSubject();
   Stream<Pokemon?> get streamPokemon => _streamPokemon.stream;
@@ -101,8 +105,8 @@ class PokemonDetailViewModel {
   final BehaviorSubject<List<MoveState>> _streamMoves = BehaviorSubject();
   Stream<List<MoveState>> get streamMoves => _streamMoves.stream;
 
-  Future<void> initial(int index, List<PokemonSummary> pokemons) async {
-    _pokemonsSummary = pokemons;
+  Future<void> initial(int index) async {
+    _pokemonsSummary = pokedexStorage.getPokemons();
     await setPokemon(index);
   }
 

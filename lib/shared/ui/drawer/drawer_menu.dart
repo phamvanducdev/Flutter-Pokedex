@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:lottie/lottie.dart';
 import 'package:pokedex/shared/ui/drawer/drawer_menu_item.dart';
 import 'package:pokedex/shared/ui/widgets/animated_pokeball.dart';
@@ -54,14 +55,20 @@ class DrawerMenuWidget extends StatelessWidget {
                     ),
                     children: [
                       DrawerMenuItemWidget(
+                        available: true,
                         itemText: 'Pokédex',
                         itemColor: appColors.drawerPokedex,
-                        onTapListener: () {},
+                        onTapListener: () {
+                          GoRouter.of(context).replace('/home');
+                        },
                       ),
                       DrawerMenuItemWidget(
+                        available: true,
                         itemText: 'Items',
                         itemColor: appColors.drawerItems,
-                        onTapListener: () {},
+                        onTapListener: () {
+                          GoRouter.of(context).replace('/items');
+                        },
                       ),
                       DrawerMenuItemWidget(
                         itemText: 'Moves',

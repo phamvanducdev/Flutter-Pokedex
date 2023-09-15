@@ -3,12 +3,14 @@ import 'package:pokedex/shared/ui/canvas/white_pokeball_canvas.dart';
 import 'package:pokedex/theme/app_theme.dart';
 
 class DrawerMenuItemWidget extends StatelessWidget {
+  final bool available;
   final String itemText;
   final Color itemColor;
   final VoidCallback? onTapListener;
 
   const DrawerMenuItemWidget({
     super.key,
+    this.available = false,
     required this.itemText,
     required this.itemColor,
     this.onTapListener,
@@ -28,7 +30,7 @@ class DrawerMenuItemWidget extends StatelessWidget {
         onTap: onTapListener,
         child: Container(
           decoration: BoxDecoration(
-            color: itemColor,
+            color: available ? itemColor : appColors.black.withOpacity(0.2),
             borderRadius: BorderRadius.circular(8),
           ),
           child: ClipRRect(

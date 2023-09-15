@@ -21,7 +21,7 @@ class FireStorageImageWidget extends StatelessWidget {
   });
 
   Future<String?> _getImageURL() async {
-    var firestoreImageCaches = GetIt.instance<FirestoreImageCaches>();
+    var firestoreImageCaches = GetIt.instance<FirestoreImageCacheStorage>();
 
     try {
       var cacheImageURL = await firestoreImageCaches.getImageURL(storagePath);

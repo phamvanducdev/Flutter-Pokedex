@@ -56,7 +56,7 @@ class AnimatedSpritesWidget extends StatelessWidget {
               ),
               Text(
                 backTitle,
-                style: textTheme.bodyText1,
+                style: textTheme.bodyLarge,
                 textAlign: TextAlign.center,
               ),
             ],

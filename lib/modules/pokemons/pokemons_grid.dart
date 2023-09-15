@@ -1,14 +1,17 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
-import 'package:pokedex/modules/detail/pokemon_detail_screen.dart';
 import 'package:pokedex/modules/pokemons/pokemon_item.dart';
 import 'package:pokedex/shared/models/pokemon_summary.dart';
 
 class PokemonsGridWidget extends StatefulWidget {
   final List<PokemonSummary> pokemons;
 
-  const PokemonsGridWidget({super.key, required this.pokemons});
+  const PokemonsGridWidget({
+    super.key,
+    required this.pokemons,
+  });
 
   @override
   State<PokemonsGridWidget> createState() => _PokemonsGridWidgetState();
@@ -43,9 +46,7 @@ class _PokemonsGridWidgetState extends State<PokemonsGridWidget> {
 
     for (int index = initialRange; index < finalRange; index++) {
       final pokemon = widget.pokemons[index];
-
       items.add(_buildPokemonItem(index: index, pokemon: pokemon));
-
       _preCachePokemonImage(pokemon: pokemon);
     }
 
@@ -66,15 +67,7 @@ class _PokemonsGridWidgetState extends State<PokemonsGridWidget> {
   }) {
     return InkWell(
       onTap: () async {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (_) {
-            return PokemonDetailScreen(
-              index: index,
-              pokemons: widget.pokemons,
-            );
-          }),
-        );
+        GoRouter.of(context).push('/details/$index');
       },
       child: Ink(
         child: PokeItemWidget(
